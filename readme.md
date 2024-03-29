@@ -24,5 +24,5 @@ poetry export -f requirements.txt --output src/requirements.txt --without-hashes
 
 ## デプロイ
 ```bash
-gcloud functions deploy function-1 --runtime python311 --trigger-http --allow-unauthenticated --source=src --env-vars-file=src/.env.yaml
+gcloud functions deploy function-1 --runtime python311 --trigger-http --allow-unauthenticated --source=src --env-vars-file=src/.env.yaml --entry-point=callback
 ```
